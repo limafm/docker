@@ -1,0 +1,8 @@
+# check for your images
+# verificar suas images
+docker images
+
+# Build a dockerfile
+# carregar um dockerfile
+docker build -t my_metrics .
+
