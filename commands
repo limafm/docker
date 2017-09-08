@@ -1,8 +1,28 @@
-# check for your images
-# verificar suas images
+# Show your images
+# mostrar suas images
 docker images
+
+# Remove one or more images
+# Remove uma ou mais imagens
+docker rmi f80207d999c7
 
 # Build a dockerfile
 # carregar um dockerfile
-docker build -t my_metrics .
+docker build -t my-app .
+
+# Build specifying a dockerfile
+# carregar especificando um dockerfile
+docker build -f docker/app/Dockerfile .
+
+# Run an image
+# Executar uma imagem
+docker run my-app
+
+# Run an image with some parameters
+# -p: port mapping
+# -e: environment variables
+# Executar uma imagem com alguns parametros
+# -p: mapeamento de porta
+# -e: variaveis de ambiente
+docker run -p 6666:6666 -e AAAA=$AAAA -e BBBB=huehuebr my-app
 
